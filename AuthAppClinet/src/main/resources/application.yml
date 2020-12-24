@@ -1,0 +1,14 @@
+server:
+  port: 9999
+  context-path: /ui
+  session:    cookie:      name: UISESSION
+  
+  
+security:
+  basic:    enabled: false
+  oauth2:
+   client:      client-id: ClintId
+      clinetSecret:secret
+      accessTokenUri:http://localhost:8888/auth/oauth/token
+      userAuthenticationuri:http://localhost:8888/auth/oauth/authorize
+   resource:      userInfouri:http://localhost:8888/auth/customer/principal
